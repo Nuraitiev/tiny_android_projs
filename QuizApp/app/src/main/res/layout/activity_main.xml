@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    tools:context=".MainActivity">
+
+    <!-- Sets a Vertical constraint guideline to place the
+    layout views
+    100 points from the top of the screen -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        app:layout_constraintGuide_begin="100pt"
+        android:layout_height="wrap_content"/>
+    <!-- Set the top constraint of this Text tag to
+    be positioned below the guideline. The text
+    displayed will be taken from the "quiz_app"
+    string resource. -->
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        android:id="@+id/tvAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="@string/quiz_app"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <!-- android:elevation: Sets the elevation of the card
+    view, giving it a shadow effect. - app:cardCornerRadius:
+    Specifies the corner radius of the card view, creating
+    rounded corners. -->
+    <com.google.android.material.card.MaterialCardView
+        app:layout_constraintTop_toBottomOf="@id/tvAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        app:cardCornerRadius="8dp">
+
+        <!-- Set the orientation of the LinearLayout to
+        vertical -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/welcome"
+                android:textColor="#363A43"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/name_label"
+                android:textColor="#7A8089"
+                android:textSize="16sp" />
+
+                <!-- Apply the Material Components style "Outlined
+                Box" to the TextInputLayout
+                which adds a Box around it
+                -->
+                <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionGo"
+                android:hint="@string/name_hint"
+                android:inputType="textCapWords"
+                android:textColor="#363A43"
+                android:textColorHint="#7A8089" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/purple_200"
+                android:text="@string/start"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
