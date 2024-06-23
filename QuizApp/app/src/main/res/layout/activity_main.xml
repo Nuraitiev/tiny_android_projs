@@ -54,7 +54,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/sixteen_dp"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tvTitle"
@@ -69,7 +69,7 @@
                 android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/sixteen_dp"
                 android:gravity="center"
                 android:text="@string/name_label"
                 android:textColor="#7A8089"
@@ -84,7 +84,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="@dimen/twenty_dp">
                 <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
@@ -99,7 +99,7 @@
                 android:id="@+id/btnStart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/sixteen_dp"
                 android:background="@color/purple_200"
                 android:text="@string/start"
                 android:textColor="@android:color/white"
