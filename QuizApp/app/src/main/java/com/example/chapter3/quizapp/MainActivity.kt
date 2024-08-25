@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                     .show()
             } else {
                 val intent = Intent(this@MainActivity, QuizQuestionsActivity::class.java)
-                intent.putExtra(SyncStateContract.Constants.ACCOUNT_NAME, nameTxt.text.toString())
+                intent.putExtra(Constant.USER_NAME, nameTxt.text.toString())
                 startActivity(intent)
                 finish()
             }
